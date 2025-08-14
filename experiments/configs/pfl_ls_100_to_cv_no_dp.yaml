@@ -1,0 +1,27 @@
+shared_config:
+  eval: en-dev-transf.csv,en-test-transf.csv
+  tar: tar_file
+  report: 25
+  # PUT HERE PATH TO THE MODEL
+  restore_checkpoint: pretrained/jax-model
+  is_restore_optim: False
+pfl_config:
+  train: ids-en-train-transf.csv
+  batch_size: 120
+  # set any cohort size - we use the same hyperparameters
+  cohort_size: 1024
+  server_steps: 2000
+local_optim_config:
+  optim: sgd
+  lr: 0.2
+  num_epochs: -1
+  num_steps: 10
+server_optim_config:
+  optim: lamb
+  lr: 0.002
+  lr_schedule: exp
+  lr_decay_start_update: 750
+  lr_exponential_decay_rate: 0.6
+  lr_exponential_decay_transition_steps: 750
+dp_config:
+  clip_deltas: 0.01

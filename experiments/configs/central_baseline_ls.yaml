@@ -1,0 +1,14 @@
+shared_config:
+  eval: dev-clean.csv,dev-other.csv,test-clean.csv,test-other.csv
+  tar: tar_file
+central_config:
+  train: train-all-960.csv
+  batch_size: 240
+server_optim_config:
+  warmup: 1
+  optim: lars
+  lr: 0.5
+  lr_decay_start_update: 250000
+  lr_schedule: exp
+  lr_exponential_decay_transition_steps: 50000
+  lr_exponential_decay_rate: 0.5

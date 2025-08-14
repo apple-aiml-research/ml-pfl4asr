@@ -1,0 +1,31 @@
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[project]
+authors = [{name = "Tatiana Likhomanenko, Martin Pelikan"}, {email = "antares@apple.com"}]
+description = "Research code for PFL for ASR"
+name = "pfl4asr"
+requires-python = ">3.9"
+version = "0.1.0"
+
+dependencies = [
+  "numpy==2.2.6",
+  "pytest",
+  "jiwer", # C++ WER computation
+  "joblib",
+  "simple_parsing", # CLI
+  "jax[cuda12]==0.6.2",
+  "flax==0.10.7", 
+  "optax==0.2.5",
+  "loguru", # logging
+  "mlx-data==0.1.0",
+  "einops",
+  "tensorboardX",
+  "scikit-learn",
+  "unidecode",
+  "optax-shampoo==0.0.6"
+]

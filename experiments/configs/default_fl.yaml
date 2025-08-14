@@ -1,0 +1,11 @@
+shared_config:
+  input_key: filename
+  target_key: transcription
+  additional_chars: '-'
+  threads: 16
+  batching_buffer_size: 64
+  start_saug: 0
+  report: 100
+block_config:
+  ln_norm_type: pre
+  dtype: bfloat16

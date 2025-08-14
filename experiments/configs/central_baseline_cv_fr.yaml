@@ -1,0 +1,15 @@
+shared_config:
+  eval: fr-dev-transf.csv,fr-test-transf.csv
+  tar: fr.tar
+  additional_chars: ãýóßñôâä-ùïëíàçúûæÿáèüö*îêœõé
+central_config:
+  train: fr-train-transf.csv
+  batch_size: 240
+server_optim_config:
+  warmup: 1
+  optim: lars
+  lr: 0.5
+  lr_decay_start_update: 200000
+
+
+  

@@ -1,0 +1,10 @@
+shared_config:
+  eval: dev-clean.csv,dev-other.csv,test-clean.csv,test-other.csv
+  tar: tar_file
+central_config:
+  train: train-clean-100.csv
+  batch_size: 240
+server_optim_config:
+  warmup: 1
+  optim: lars
+  lr: 0.5

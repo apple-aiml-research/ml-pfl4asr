@@ -1,0 +1,9 @@
+
+repos:
+# General repo formatting, you can change settings within your .pyproject.toml
+- repo: https://github.com/astral-sh/ruff-pre-commit
+  rev: v0.9.3
+  hooks:
+    - id: ruff
+      args: [ --fix-only ]
+    - id: ruff-format
